@@ -12,6 +12,7 @@ import LevelRoute from './Widgets/LevelRoute';
 import Login from './Login';
 import Register from './Register';
 import Dashboard from './Dashboard';
+import ChatRobat from './ChatRobat';
 import Blank from './Blank';
 import Toolbar from './Widgets/Toolbar';
 import BaseComponent from './Widgets/BaseComponent';
@@ -61,6 +62,7 @@ const routesConfig = app => [
     indexRoute: '/dashboard',
     childRoutes: [
       Dashboard(app),
+      ChatRobat(app),
       Blank(app),
       Toolbar(app),
       Column(),
