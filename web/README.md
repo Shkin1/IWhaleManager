@@ -4,7 +4,7 @@
 ## 使用方法
 
 ``` javascript
-$ git clone https://github.com/LANIF-UI/dva-boot-admin.git
+$ git clone https://github.com/Shkin1/IWhaleManager.git
 $ cd dva-boot-admin
 // 安装依赖
 $ yarn
@@ -17,3 +17,4 @@ $ yarn build --analyze
 ```
 
 
+> 参考https://github.com/LANIF-UI/dva-boot-admin.git
