@@ -18,8 +18,8 @@ export default ({ fetchMock, delay, mock, toSuccess, toError }) => {
     '/api/charts/bar2': options => {
       return toSuccess(
         mock([
-          { name:'London', 'Jan.|1-100': 1, 'Feb.|1-100': 1, 'Mar.|1-100' : 1, 'Apr.|1-100': 1, 'May.|1-100': 1, 'Jun.|1-100': 1, 'Jul.|1-100': 1, 'Aug.|1-100': 1 },
-          { name:'Berlin', 'Jan.|1-100': 1, 'Feb.|1-100': 1, 'Mar.|1-100' : 1, 'Apr.|1-100': 1, 'May.|1-100': 1, 'Jun.|1-100': 1, 'Jul.|1-100': 1, 'Aug.|1-100': 1}
+          { name:'借', 'Jan.|1-100': 1, 'Feb.|1-100': 1, 'Mar.|1-100' : 1, 'Apr.|1-100': 1, 'May.|1-100': 1, 'Jun.|1-100': 1, 'Jul.|1-100': 1, 'Aug.|1-100': 1 },
+          { name:'还', 'Jan.|1-100': 1, 'Feb.|1-100': 1, 'Mar.|1-100' : 1, 'Apr.|1-100': 1, 'May.|1-100': 1, 'Jun.|1-100': 1, 'Jul.|1-100': 1, 'Aug.|1-100': 1}
         ]),
         400
       );
