@@ -33,9 +33,9 @@ export default class Dashboard extends BaseComponent {
                             <Panel className="qq" header={false} cover>
                                 <Icon type="qq" antd />
                                 <h2>
-                                    <b>523</b>
+                                    <b>5本</b>
                                 </h2>
-                                <h5 className="text-muted">QQ</h5>
+                                <h5 className="text-muted">图书资源</h5>
                             </Panel>
                         </Col>
                         <Col md={6}>

@@ -11,12 +11,22 @@ const { Content } = Layout;
 const { Chart, Axis, Geom, Tooltip, Legend, Coord, Label } = G2;
 
 const rankingListData = [];
-for (let i = 0; i < 7; i += 1) {
-  rankingListData.push({
-    title: `工专路 ${i} 号店`,
-    total: 323234
-  });
-}
+rankingListData.push({
+  title: `石金普`,
+  total: `借书`,
+  bookName: `大话数据结构`
+});
+rankingListData.push({
+  title: `石金普`,
+  total: `还书`,
+  bookName: `大话数据结构`
+});
+// for (let i = 0; i < 7; i += 1) {
+//   rankingListData.push({
+//     title: `石金普 ${i}`,
+//     total: 323234
+//   });
+// }
 
 @connect(({ dashboard }) => ({
   dashboard
@@ -29,61 +39,62 @@ export default class Dashboard extends BaseComponent {
       <Layout className="full-layout page dashboard-page">
         <Content>
           <Row gutter={20}>
-            <Col md={6}>
+            <Col md={8}>
               <Panel className="qq" header={false} cover>
-                <Icon type="qq" antd />
+                <Icon type="github" antd />
                 <h2>
-                  <b>523</b>
+                  <b>5本</b>
                 </h2>
-                <h5 className="text-muted">QQ</h5>
+                <h5 className="text-muted">图书资源</h5>
               </Panel>
             </Col>
-            <Col md={6}>
+            <Col md={8}>
               <Panel className="wechat" header={false} cover>
                 <Icon type="wechat" antd />
                 <h2>
-                  <b>99+</b>
+                  <b>3本</b>
                 </h2>
-                <h5 className="text-muted">微信</h5>
+                <h5 className="text-muted">已借</h5>
               </Panel>
             </Col>
-            <Col md={6}>
+            <Col md={8}>
               <Panel className="skype" header={false} cover>
                 <Icon type="skype" antd />
                 <h2>
-                  <b>2</b>
+                  <b>2本</b>
                 </h2>
-                <h5 className="text-muted">skype</h5>
+                <h5 className="text-muted">剩余</h5>
               </Panel>
             </Col>
-            <Col md={6}>
-              <Panel className="github" header={false} cover>
-                <Icon type="github" antd />
-                <h2>
-                  <b>999</b>
-                </h2>
-                <h5 className="text-muted">github</h5>
-              </Panel>
-            </Col>
+            {/*<Col md={6}>*/}
+            {/*  <Panel className="github" header={false} cover>*/}
+            {/*    <Icon type="github" antd />*/}
+            {/*    <h2>*/}
+            {/*      <b>999</b>*/}
+            {/*    </h2>*/}
+            {/*    <h5 className="text-muted">github</h5>*/}
+            {/*  </Panel>*/}
+            {/*</Col>*/}
           </Row>
           <Row>
             <Col>
-              <Panel title="数据面板组件" height={300}>
+              <Panel title="图书借还统计" height={300}>
                 <div className="flex">
                   <div className="flex-auto-hidden flex flex-column">
-                    <h4 className="flex-none">销售额分布</h4>
+                    <h4 className="flex-none">借还分布</h4>
                     <div className="flex-auto-hidden">
                       <Bar2 data={bar2} />
                     </div>
                   </div>
                   <div className="flex-none sales-order">
-                    <h4>门店销售额排名</h4>
+                    <h4>借阅记录</h4>
                     <ul>
                       {rankingListData.map((item, i) => (
                         <li key={item.title}>
                           <span>{i + 1}</span>
                           <span>{item.title}</span>
                           <span>{item.total}</span>
+                          <span>{item.bookName}</span>
                         </li>
                       ))}
                     </ul>
